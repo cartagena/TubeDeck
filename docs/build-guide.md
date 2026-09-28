@@ -105,18 +105,18 @@ Follow the sections in order the first time through:
 
 ## 2. Parts & materials
 
-**Status:** outline · needs your input
+**Status:** complete
 
 Everything to buy, with the dimensions the design depends on.
 
-### Known so far
+### Parts list
 
 The links are the exact items used for the prototype. The dimensions in the notes come from those parts, so if you substitute something else, check it against the [test plate](#5-test-plate) first.
 
 | Item | Qty | Notes | Source |
 |---|---|---|---|
 | 10.5" portable monitor | 1 | Body 236 × 168 × 9.5 mm; active area 225 × 152 mm. USB-C and mini-HDMI on the left edge, wheel and button on the right. | [moonka 10.5" portable monitor](https://www.amazon.com/dp/B0C7KPPXTZ) |
-| Raspberry Pi 4 | 1 | Mounted on the rear cover, 58 × 49 mm hole pattern. | |
+| Raspberry Pi 4 Model B | 1 | The prototype uses the 2 GB model. Every RAM size is the same board, so any of them fits the case; choose the amount of memory based on which systems you want to emulate. It mounts on the rear cover using its 58 × 49 mm hole pattern. | [Raspberry Pi 4 Model B, 2 GB (Vilros)](https://vilros.com/products/raspberry-pi-4-model-b-1?variant=40809478717534) |
 | Dual-port USB-A panel-mount extension cable | 2 | Flange 29 × 26 mm, body 18.7 mm wide, spring clips flare to 29.5 mm. Cut-out 25 × 22 mm (print-tested). | [BATIGE dual-port square USB 3.0 panel flush mount, with buckle](https://www.amazon.com/dp/B0BDWVFZKH) |
 | Panel-mount USB-C power connector | 1 | Threaded barrel 23.58 mm. 24 mm hole (print-tested). Sold as a 2-pack, so one is spare. | [Nexarelle USB-C panel mount adapter with dust cover](https://www.amazon.com/dp/B0G42HQP9W) |
 | 16 mm momentary push button | 1 | Wired to the Pi for a safe shutdown. | [16 mm momentary push button](https://www.amazon.com/dp/B0F62S67RS) |
@@ -125,17 +125,13 @@ The links are the exact items used for the prototype. The dimensions in the note
 | USB-C Y splitter cable, 1 ft | 1 | Male to 2 × female, charging only. Splits the single power input between the Pi and the monitor — *confirm this is how it's wired*. | [Halokny USB-C Y splitter](https://www.amazon.com/dp/B0FKLTVTXJ) |
 | Neodymium disc magnets 8 × 3 mm | 26 | 13 joints: 5 faceplate–cradle, 4 cradle–shell, 4 rear cover–shell. Pocket is 8.35 mm — *not yet print-tested*. Sold as a 160-piece assortment of 40 each of 8 × 3, 6 × 3, 5 × 3 and 3 × 3 mm, so the 8 × 3 mm size covers all 26 with 14 spare. | [rhinocats 160 pcs small magnets](https://www.amazon.com/dp/B0GK9VFB97) |
 | Knurled insert nuts, M2.5 | 4 | For the Pi standoffs. 4.0 mm hole. Sold as a 100-pack. | [M2.5 knurled insert nuts, 100 pcs](https://www.amazon.com/dp/B0DPQJY2W8) |
-| M2.5 screws | *4?* | *Length to confirm.* | *link to add* |
-| Adhesive-base zip-tie mounts / zip ties | *?* | Optional: the printed shell has zip-tie loops for anchoring the front USB cables. | |
+| M2.5 screws, 5 mm long | 4 | Attach the Pi to the four standoff inserts. The prototype used M2.5 × 5 mm Phillips screws marked "PB2.5×5", taken from the builder's own stock. The linked listing includes M2.5 × 5 mm screws. | [M2.5 Phillips screws](https://www.amazon.com/dp/B07HC3LQYS) |
+| USB-C power supply | 1 | The prototype runs from a 47 W USB-C charger the builder already owned, which powers the Pi and the monitor together through the Y splitter. That rating is the tested configuration; a smaller charger is untested. It plugs into the USB-C connector on the back of the case. | Any 47 W USB-C charger |
+| PLA filament | As needed | Generic PLA. Each part prints without supports, and each can be a different color. | Any brand |
+| Super glue | 1 tube | Glues the magnets into their pockets, the collar into its groove, and the feet into their sockets. | Any brand |
+| Zip ties | 4 or more | The printed shell has four zip-tie loops on its floor for anchoring the front USB cables, so no separate mounts are needed. Each loop takes a tie up to 4.8 mm wide and 1.5 mm thick; the linked ties are 3.5 mm wide and 1.5 mm thick, so they fit. Buy extra for tidying the wiring. | [Zip ties](https://www.amazon.com/dp/B0CKWPJYMS) |
 
-### To fill in
-
-- [ ] Links for the M2.5 screws and zip-tie mounts
-- [ ] The Raspberry Pi 4 model / RAM used
-- [ ] The monitor's dimensions differ between brands: note the model number to match against
-- [ ] USB-C power supply: a 47 W PD charger is known to run Pi + monitor; confirm the recommendation
-- [ ] Filament: type, colors per part, and roughly how much (grams per part)
-- [ ] Glue: which magnet glue and which for the collar and feet
+> **Note on the monitor.** Portable monitors sold as "10.5 inch" differ from brand to brand in body size, thickness, and where the ports and buttons sit. The case is built around the measurements of the monitor listed above, with 0.3 mm of clearance around its body. If you use a different monitor, measure it and compare it with those numbers before you print. The [Printing](#4-printing) section lists the dimensions the printed parts depend on, and [Customizing](#11-customizing) explains how to adjust the design for a different monitor.
 
 ---
 
@@ -146,9 +142,9 @@ The links are the exact items used for the prototype. The dimensions in the note
 ### Likely list — confirm
 
 - [ ] 3D printer with a 256 mm bed (built and tested on a Bambu Lab A1, no multi-material system)
-- [ ] Soldering iron with a heat-set insert tip (for the four Pi standoffs)
 - [ ] Calipers (for checking magnet and connector fits)
-- [ ] Wire strippers / soldering for the button wiring
+- [ ] *Open:* the tool used to install the four knurled inserts in the Pi standoffs. The prototype builder did not use a soldering iron; record what was used, or recommend one.
+- [ ] *Open:* the tools and method for connecting the power button's wires to the Pi (wire strippers, crimp connectors, or soldering)
 - [ ] Flat screwdriver or plastic pry tool (for the rear cover notch)
 - [ ] Hobby knife, sandpaper
 
